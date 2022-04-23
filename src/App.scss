@@ -5,32 +5,124 @@ main {
 	display: grid;
 	place-items: center;
 	gap: 3rem;
+	margin-inline: auto;
 
 	.title {
 		margin: 0;
 	}
 
 	.card {
+		width: 100%;
+		max-width: 950px;
 		background-color: #fff;
 		border: 2rem solid #cee5e4;
 
 		&-body {
-      max-width: 672px;
+			max-width: 672px;
 			display: grid;
 			place-items: center;
 			gap: 2rem;
+			padding: 3rem 2rem;
 
-			.section-content {
+			.section {
 				width: 100%;
-				height: 108px;
 				display: flex;
 				justify-content: space-between;
-				align-items: flex-start;
+				align-items: center;
+				flex-direction: column;
 				border: 2px solid cyan;
+				gap: 1rem;
 
-        q{
-          width: 400px;
-        }
+				&-content {
+					height: max-content;
+
+					q {
+						max-width: 400px;
+						text-align: center;
+					}
+				}
+
+				&-loader {
+					.profile-info {
+						display: grid;
+						place-items: center;
+						gap: 0.5rem;
+						h4 {
+							margin: 0;
+						}
+						p {
+							margin: 0;
+						}
+					}
+				}
+				&-underline {
+					height: 0.125rem;
+					background-color: #000;
+				}
+				&-footer {
+					width: auto;
+
+					.btns {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: #000;
+						border-radius: 1.5rem;
+
+						.btn {
+							width: 50px;
+							height: 40px;
+							padding: 0.25rem;
+							border: none;
+							outline: 0;
+							font-size: 0.9rem;
+							background-color: transparent;
+							color: #fff;
+							display: grid;
+							place-items: center;
+							cursor: pointer;
+							transition: all 0.5s ease-in-out;
+
+							&-left {
+								border-top-left-radius: 50%;
+								border-bottom-left-radius: 50%;
+
+								&:hover,
+								&.active {
+									background-color: green;
+									border-right: 1px solid #fff;
+								}
+							}
+							&-right {
+								border-top-right-radius: 50%;
+								border-bottom-right-radius: 50%;
+
+								&:hover,
+								&.active {
+									background-color: green;
+								}
+								border-left: 1px solid #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 600px) {
+	main {
+		.card {
+			&-body {
+				.section {
+					flex-direction: row;
+					align-items: flex-start;
+
+					&-loader {
+						align-items: flex-end;
+					}
+				}
 			}
 		}
 	}
