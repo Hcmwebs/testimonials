@@ -34,7 +34,6 @@ const App = () => {
 
 	return (
 		<main>
-			<h1 className='title'>Testimonials UI</h1>
 			<Testimonial reviews={reviews} />
 		</main>
 	)
