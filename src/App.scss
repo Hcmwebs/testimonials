@@ -38,7 +38,8 @@ main {
 
 					q {
 						max-width: 400px;
-						text-align: center;
+						text-align: justify;
+						padding-inline: 0.5rem;
 					}
 				}
 
@@ -66,12 +67,11 @@ main {
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						background-color: #000;
+						// background-color: #e3f0ef;
 						border-radius: 1.5rem;
-						border:none;
-						transition: all 0.3s ease-in-out;s
-
-						&:hover{
+						border: none;
+						transition: all 0.3s ease-in-out;
+						&:hover {
 							opacity: 0.8;
 						}
 
@@ -82,8 +82,8 @@ main {
 							border: none;
 							outline: 0;
 							font-size: 0.9rem;
-							background-color: transparent;
-							color: #fff;
+							background-color: #e3f0ef;
+							color: #000;
 							display: grid;
 							place-items: center;
 							cursor: pointer;
@@ -95,8 +95,8 @@ main {
 
 								&:hover,
 								&.active {
-									background-color: green;
-									border-right: 1px solid #fff;
+									background-color: #cee5e4;
+									transform: scale(0.95);
 								}
 							}
 							&-right {
@@ -105,8 +105,8 @@ main {
 
 								&:hover,
 								&.active {
-									background-color: green;
-									border-left: 1px solid #fff;
+									background-color: #cee5e4;
+									transform: scale(0.95);
 								}
 							}
 						}
