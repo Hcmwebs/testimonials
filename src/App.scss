@@ -1,13 +1,10 @@
 main {
-	width: min(100% - 2rem, 1000px);
+	width: min(95vw, 1000px);
 	height: 100%;
 	background-color: #e3f0ef;
 	display: grid;
 	place-items: center;
 	gap: 3rem;
-	margin-inline: auto;
-
-	
 }
 
 @media (min-width: 600px) {
