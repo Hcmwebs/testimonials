@@ -1,6 +1,5 @@
-
 .title {
-  margin: 0;
+	margin: 0;
 }
 .img {
 	width: 100px;
@@ -11,39 +10,39 @@
 
 .reviews {
 	width: 90vw;
-	// max-width:700px;
-  height: 600px;
+	max-width: 700px;
+	height: 650px;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px dotted red;
 	overflow: hidden;
+	box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.1),
+		0px 5px 15px 2px rgba(0, 0, 0, 0.6);
 }
 
-.card {
+article {
 	width: 100%;
 	height: 100%;
-	max-width: 950px;
 	background-color: #fff;
 	border: 2rem solid #cee5e4;
 	position: absolute;
+	inset: 0;
 	opacity: 0;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.8s ease-in-out;
 
-
-	&.activeSlide{
-		transform: translateY(0);
+	&.activeSlide {
+		transform: translateX(0);
 		opacity: 1;
 	}
-	&.nextSlide{
-		transform: translateY(100%);
+	&.nextSlide {
+		transform: translateX(100%);
 	}
-	&.prevSlide{
-		transform: translateY(-100%);
+	&.lastSlide {
+		transform: translateX(-100%);
 	}
 
-	&-body {
+	.body {
 		max-width: 672px;
 		display: grid;
 		place-items: center;
@@ -56,7 +55,6 @@
 			justify-content: space-between;
 			align-items: center;
 			flex-direction: column;
-			border: 2px solid cyan;
 			gap: 1rem;
 
 			&-content {
@@ -70,6 +68,16 @@
 			}
 
 			&-loader {
+				span {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 0.35rem;
+
+					.icon-star {
+						color: gold;
+					}
+				}
 				.profile-info {
 					display: grid;
 					place-items: center;
@@ -83,8 +91,9 @@
 				}
 			}
 			&-underline {
-				height: 0.125rem;
+				height: 0.0625rem;
 				background-color: #000;
+				opacity: 0.2;
 			}
 			&-footer {
 				width: auto;
@@ -136,6 +145,27 @@
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 600px) {
+	.reviews {
+		height: 450px;
+	}
+
+	article {
+		.body {
+			.section {
+				flex-direction: row;
+				align-items: flex-start;
+
+				&-loader {
+					align-items: flex-end;
+					padding-right: 0.5rem;
+					padding-left: 2rem;
 				}
 			}
 		}
