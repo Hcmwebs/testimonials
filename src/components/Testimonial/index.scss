@@ -60,6 +60,7 @@ article {
 				}
 
 				q {
+					font-size: 26px;
 					max-width: 400px;
 					text-align: justify;
 					padding-inline: 0.5rem;
@@ -152,7 +153,7 @@ article {
 
 @media (min-width: 600px) {
 	.reviews {
-		height: 450px;
+		height: 500px;
 	}
 
 	article {
@@ -164,7 +165,7 @@ article {
 				&-loader {
 					align-items: flex-end;
 					padding-right: 0.5rem;
-					padding-left: 2rem;
+					padding-left: 2.5rem;
 				}
 			}
 		}
